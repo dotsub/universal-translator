@@ -1,0 +1,56 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="https://dotsub.com/">About Dotsub</a></li>
+                <li role="presentation"><a href="mailto:info@dotsub.com">Contact</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Universal Translator</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Universal Translator</h1>
+        <div class="upgrade alert alert-danger" role="alert" style="display:none">
+            Sorry! Your brower does not support Speech Synthesis and Speech Recognition!<br/>
+            Try this demo using Chrome 11+
+        </div>
+        <p class="lead">
+            I'd like to speak in:
+            <select class="languageInput">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="it">Italian</option>
+                <option value="es">Spanish</option>
+            </select>
+            and have it spoken back by:
+            <select class="languageSpoken">
+            </select>
+        </p>
+        <p>
+            Hold shift to start voice recognition.
+        </p>
+        <hr/>
+        <p>
+            <b>Spoken:</b> <span class="result"></span>
+        </p>
+        <p>
+            <b>Resulting Translation:</b> <span class="translation"></span>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="/js/universal-translator.js"></script>
+</html>
