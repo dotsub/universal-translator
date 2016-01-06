@@ -121,13 +121,9 @@ var google  = {
 //voices are loaded async
 window.speechSynthesis.onvoiceschanged = function() {
     for (var i = 0; i < window.speechSynthesis.getVoices().length; i++ ) {
-        //only non English voices should be added
         var voice = window.speechSynthesis.getVoices()[i];
-        if (!voice.lang.startsWith('en')) {
-            //create option tag
-            var name = voice.name + " (" + voice.lang + ")";
-            $('.languageSpoken').append($('<option>', {value: i, text: name}));
-        }
+        var name = voice.name + " (" + voice.lang + ")";
+        $('.languageSpoken').append($('<option>', {value: i, text: name}));
     }
     //select french to start
     if (speaking === undefined) {
